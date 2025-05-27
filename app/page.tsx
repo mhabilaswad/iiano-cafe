@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useRouter } from 'next/navigation';
 
 // Helper: hitung rentang waktu berdasarkan input (misal: "18.00" -> "18.00 - 19.30")
 function getTimeRange(start: string): string {
@@ -26,6 +27,7 @@ function getTimeRange(start: string): string {
 
 export default function Home() {
   const [selectedTime, setSelectedTime] = useState<Record<number, string>>({});
+  const router = useRouter();
 
   function handleTimeSelect(index: number, time: string) {
     setSelectedTime((prev) => ({
@@ -85,10 +87,11 @@ export default function Home() {
                 </div>
                 <button
                   className="text-sm font-medium text-white bg-[var(--color-1)] px-4 py-1.5 rounded-2xl hover:opacity-90"
-                  onClick={() => console.log(`Reserve table ${i}`)}
+                  onClick={() => router.push('/detail/beach-view')}
                 >
                   Reserve
                 </button>
+
               </div>
             </div>
           ))}
