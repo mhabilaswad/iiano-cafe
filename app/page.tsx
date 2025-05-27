@@ -26,7 +26,6 @@ function getTimeRange(start: string): string {
 export default function Home() {
   const [selectedTime, setSelectedTime] = useState<Record<number, string>>({});
 
-  // Simpan waktu yang dipilih untuk tiap kotak
   function handleTimeSelect(index: number, time: string) {
     setSelectedTime((prev) => ({
       ...prev,
@@ -49,8 +48,16 @@ export default function Home() {
                 className="w-full h-40 object-cover rounded-lg mb-4"
               />
               <div className="text-lg font-bold text-black">Beach View</div>
-              <div className="text-sm text-gray-500">Indoor</div>
-              <div className="text-sm text-gray-500">4 People</div>
+
+              <div className="text-sm text-gray-500 mt-1">
+                Indoor &nbsp;-&nbsp; 4 People
+              </div>
+
+
+              <div className="text-sm mt-1 text-green-600 font-medium">
+                Status: Available
+              </div>
+
 
               <div className="mt-2 text-sm text-gray-700">
                 Waktu:{' '}
@@ -59,20 +66,28 @@ export default function Home() {
                 </span>
               </div>
 
-              <div className="mt-3 flex gap-2">
-                {['18.00', '20.00', '22.00'].map((time) => (
-                  <button
-                    key={time}
-                    onClick={() => handleTimeSelect(i, time)}
-                    className={`px-3 py-1 rounded-full border text-sm ${
-                      selectedTime[i] === time
-                        ? 'bg-[var(--color-1)] text-white'
+              {/* Pilihan waktu + Tombol Reserve */}
+              <div className="mt-4 flex items-center justify-between">
+                <div className="flex gap-2">
+                  {['18.00', '20.00', '22.00'].map((time) => (
+                    <button
+                      key={time}
+                      onClick={() => handleTimeSelect(i, time)}
+                      className={`px-3 py-1 rounded-full border text-sm ${selectedTime[i] === time
+                        ? 'bg-[var(--color-3)] text-white'
                         : 'border-gray-300 text-gray-700'
-                    }`}
-                  >
-                    {time}
-                  </button>
-                ))}
+                        }`}
+                    >
+                      {time}
+                    </button>
+                  ))}
+                </div>
+                <button
+                  className="text-sm font-medium text-white bg-[var(--color-1)] px-4 py-1.5 rounded-2xl hover:opacity-90"
+                  onClick={() => console.log(`Reserve table ${i}`)}
+                >
+                  Reserve
+                </button>
               </div>
             </div>
           ))}
