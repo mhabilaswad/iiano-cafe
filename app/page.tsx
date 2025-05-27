@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 // Helper: hitung rentang waktu berdasarkan input (misal: "18.00" -> "18.00 - 19.30")
 function getTimeRange(start: string): string {
@@ -93,6 +94,7 @@ export default function Home() {
           ))}
         </div>
       </div>
+      <Footer />
     </main>
   );
 }
