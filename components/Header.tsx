@@ -19,7 +19,7 @@ export default function Header() {
                 {/* Kanan - Menu + Profil */}
                 <div className="flex items-center space-x-12">
                     <nav className="flex space-x-6 text-base">
-                        <a href="#" className="text-black hover:underline">Home</a>
+                        <a href="#" className="text-black hover:underline">My Reservation</a>
                         <a href="#" className="text-black hover:underline">Contact Us</a>
                         <a href="#" className="text-[var(--color-1)] hover:underline">Sign Out</a>
                     </nav>
@@ -28,7 +28,7 @@ export default function Header() {
                             <div className="font-semibold">Habil Aswad</div>
                             <div className="text-gray-500">Mei 2025</div>
                         </div>
-                                                <img
+                        <img
                             src="/images/profile.png"
                             alt="Profile"
                             className="w-10 h-10 rounded-full object-cover border border-gray-300"
