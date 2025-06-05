@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# iiano-cafe Frontend
 
-## Getting Started
+**iiano-cafe** adalah aplikasi web reservasi meja untuk sebuah kafe, dibangun menggunakan **Next.js** sebagai framework frontend. Aplikasi ini memungkinkan pelanggan untuk melakukan reservasi meja secara online dan memungkinkan admin untuk mengelola proses reservasi.
 
-First, run the development server:
+---
+
+## 🌐 Fitur Utama
+
+### 🧑‍💼 Untuk Pengguna Umum
+- 🔓 **Halaman Utama**  
+  Dapat diakses tanpa login. Menampilkan informasi dasar tentang reservasi.
+
+- 📅 **Reservasi Meja**  
+  Pengguna dapat melakukan reservasi meja secara online **setelah login**.
+
+- 📂 **My Reservation**  
+  Pengguna dapat melihat status reservasi mereka:
+  - `Pending`
+  - `Confirmed`
+  - `Completed`
+  - `Cancelled`
+
+- 🔐 **Autentikasi**  
+  Pengguna harus melakukan **pendaftaran (Sign Up)** dan **login** sebelum bisa melakukan reservasi.
+
+---
+
+### 🔧 Untuk Admin
+- 🔐 **Halaman Admin**  
+  Hanya dapat diakses oleh akun admin yang sudah login.
+
+- 🪑 **Manajemen Meja**
+  - Menambahkan meja baru
+  - Menghapus meja
+  - Melihat detail meja
+
+- ✅ **Verifikasi Reservasi**
+  - Mengubah status dari `Pending` → `Confirmed` atau `Completed`
+  - Menolak reservasi jika perlu (`Cancelled`)
+
+---
+
+## 🚀 Teknologi yang Digunakan
+
+- **Next.js** – Framework React untuk frontend
+- **Tailwind CSS** – Styling responsif
+- **REST API** – Komunikasi dengan backend
+- **JWT Auth** – Untuk login dan akses yang aman
+- **Fetch API** – Mengambil data dari server backend
+- **Framer Motion** – Animasi UI
+- **React Icons** – Ikon-ikon antarmuka
+
+---
+
+## 🛠️ Instalasi dan Menjalankan
 
 ```bash
+# 1. Clone repository frontend
+git clone https://github.com/sadinal04/iiano-cafe-frontend.git
+cd iiano-cafe-frontend
+
+# 2. Install dependencies
+npm install
+
+# 3. Jalankan development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔗 Backend
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Aplikasi ini terhubung ke backend yang dibangun menggunakan **Express.js** dan **TypeScript**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Silakan kunjungi repositori backend di:  
+👉 [https://github.com/sadinal04/iiano-cafe-backend](https://github.com/sadinal04/iiano-cafe-backend)
 
-## Learn More
+> ⚠️ Pastikan backend berjalan di `http://localhost:5000` agar frontend dapat berfungsi dengan baik.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👨‍💻 Tim Pengembang
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Aulia Vika Rahman**  
+- **Sadinal Mufti**  
+- **M. Habil Aswad**
