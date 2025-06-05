@@ -81,7 +81,7 @@ Silakan kunjungi repositori backend di:
 ## 🔗 Presentasi
 
 Video presentasi di Youtube:  
-👉 [Presentasi Projek Final Prak PPL B - Kelompok 9]([https://github.com/sadinal04/iiano-cafe-backend](https://youtu.be/jx4rYvp1l7w))
+👉 [Presentasi Projek Final Prak PPL B - Kelompok 9](https://youtu.be/jx4rYvp1l7w)
 
 ---
 
